@@ -1,1 +1,877 @@
+/* =====================================================
+   LA TIENDA DE LUCY
+   ESTILOS PRINCIPALES
+   Versión 1.0
+===================================================== */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f9fc;
+    color: #243047;
+    overflow-x: hidden;
+}
+
+button,
+a {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: min(1150px, 92%);
+    margin: 0 auto;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.96);
+    border-bottom: 1px solid #e7eaf0;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
+}
+
+.header-content {
+    min-height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #27364d;
+}
+
+.logo:first-letter {
+    font-size: 1.8rem;
+}
+
+.logo strong {
+    color: #ff7a45;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav a {
+    color: #43516a;
+    font-weight: 600;
+    transition: 0.25s ease;
+}
+
+.nav a:hover {
+    color: #ff7043;
+}
+
+.menu-btn {
+    display: none;
+    border: 0;
+    background: transparent;
+    font-size: 1.7rem;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+    padding: 85px 0;
+    background: linear-gradient(
+        135deg,
+        #fff7ed,
+        #fff,
+        #eef8ff
+    );
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 60px;
+}
+
+.hero-tag {
+    display: inline-block;
+    padding: 9px 16px;
+    border-radius: 50px;
+    background: #fff0e8;
+    color: #f06438;
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(2.4rem, 5vw, 4.5rem);
+    line-height: 1.08;
+    margin-bottom: 22px;
+    color: #243047;
+}
+
+.hero h1 span {
+    display: block;
+    color: #ff7043;
+}
+
+.hero p {
+    max-width: 650px;
+    font-size: 1.12rem;
+    line-height: 1.75;
+    color: #647086;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+
+/* =====================================================
+   BOTONES
+===================================================== */
+
+.btn {
+    border: none;
+    border-radius: 14px;
+    padding: 14px 23px;
+    font-size: 1rem;
+    font-weight: 800;
+    transition: 0.25s ease;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-primary {
+    background: #ff7043;
+    color: white;
+    box-shadow: 0 8px 18px rgba(255, 112, 67, 0.25);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    background: #f35f31;
+}
+
+.btn-secondary {
+    background: white;
+    color: #34435b;
+    border: 2px solid #e5e9ef;
+}
+
+.btn-secondary:hover {
+    border-color: #ff7043;
+    color: #ff7043;
+}
+
+.btn-success {
+    width: 100%;
+    background: #27ae60;
+    color: white;
+}
+
+.btn-success:hover {
+    background: #219653;
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   PERSONAJE LUCY
+===================================================== */
+
+.lucy-character {
+    display: flex;
+    justify-content: center;
+}
+
+.character-card {
+    width: min(100%, 370px);
+    padding: 38px 30px;
+    text-align: center;
+    border-radius: 30px;
+    background: white;
+    box-shadow: 0 20px 50px rgba(37, 50, 75, 0.12);
+    border: 1px solid #edf0f5;
+}
+
+.character-icon {
+    width: 170px;
+    height: 170px;
+    margin: 0 auto 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 7rem;
+    background: #fff0c7;
+}
+
+.character-card h2 {
+    margin-bottom: 10px;
+    color: #29364b;
+}
+
+.character-card p {
+    color: #707b8e;
+    line-height: 1.6;
+}
+
+.character-stars {
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+
+
+/* =====================================================
+   SECCIONES
+===================================================== */
+
+.store-section,
+.checkout-section,
+.how-section {
+    padding: 85px 0;
+}
+
+.store-section {
+    background: #ffffff;
+}
+
+.checkout-section {
+    background: #f4f8fc;
+}
+
+.how-section {
+    background: #ffffff;
+}
+
+.section-title {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 45px;
+}
+
+.section-title > span {
+    color: #ff7043;
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+}
+
+.section-title h2 {
+    margin: 10px 0 13px;
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: #26354d;
+}
+
+.section-title p {
+    color: #707b8d;
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   INFORMACIÓN DEL JUEGO
+===================================================== */
+
+.game-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.info-card {
+    background: white;
+    border: 1px solid #e8ecf2;
+    border-radius: 18px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 8px 25px rgba(31, 48, 75, 0.06);
+}
+
+.info-card > span {
+    font-size: 2rem;
+}
+
+.info-card small {
+    display: block;
+    color: #8791a2;
+    margin-bottom: 5px;
+}
+
+.info-card strong {
+    display: block;
+    color: #27364d;
+    font-size: 1.3rem;
+}
+
+
+/* =====================================================
+   CLIENTE
+===================================================== */
+
+.customer-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 24px;
+    margin-bottom: 30px;
+    border-radius: 22px;
+    background: #fff8df;
+    border: 1px solid #f5e7b5;
+}
+
+.customer-avatar {
+    min-width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    font-size: 2.5rem;
+}
+
+.customer-message span {
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: #b98200;
+}
+
+.customer-message p {
+    margin-top: 7px;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #4f4a38;
+}
+
+
+/* =====================================================
+   PRODUCTOS
+===================================================== */
+
+.products-area {
+    padding: 25px;
+    background: #f8fafc;
+    border-radius: 25px;
+    border: 1px solid #e7ebf0;
+}
+
+.products-header,
+.cart-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 22px;
+}
+
+.products-header h3,
+.cart-header h3 {
+    font-size: 1.35rem;
+    color: #27364d;
+}
+
+.products-header span,
+.cart-header span {
+    color: #8993a3;
+    font-size: 0.9rem;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.product-card {
+    border: 2px solid transparent;
+    border-radius: 20px;
+    background: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 7px 20px rgba(30, 45, 65, 0.06);
+    transition: 0.25s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    border-color: #ffb49b;
+}
+
+.product-icon {
+    font-size: 3.5rem;
+    margin-bottom: 12px;
+}
+
+.product-card h4 {
+    color: #29364c;
+    margin-bottom: 7px;
+}
+
+.product-price {
+    display: block;
+    color: #ff7043;
+    font-weight: 800;
+    margin-bottom: 14px;
+}
+
+.product-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background: #fff0e9;
+    color: #ef6034;
+    font-weight: 800;
+}
+
+.product-btn:hover {
+    background: #ff7043;
+    color: white;
+}
+
+
+/* =====================================================
+   CARRITO
+===================================================== */
+
+.cart-area {
+    margin-top: 30px;
+    padding: 28px;
+    border-radius: 25px;
+    background: white;
+    border: 1px solid #e5e9ef;
+    box-shadow: 0 10px 30px rgba(31, 48, 75, 0.07);
+}
+
+.cart-items {
+    min-height: 80px;
+}
+
+.empty-cart {
+    padding: 25px;
+    text-align: center;
+    color: #929baa;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 14px 0;
+    border-bottom: 1px solid #edf0f4;
+}
+
+.cart-item-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.cart-item-icon {
+    font-size: 1.8rem;
+}
+
+.cart-item-name {
+    font-weight: 700;
+}
+
+.cart-item-price {
+    color: #687489;
+}
+
+.remove-item {
+    border: none;
+    background: #fff0f0;
+    color: #e34d4d;
+    border-radius: 8px;
+    padding: 7px 10px;
+}
+
+.cart-total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 25px 0;
+    padding-top: 20px;
+    border-top: 2px solid #edf0f4;
+    font-size: 1.2rem;
+}
+
+.cart-total strong {
+    color: #ff7043;
+    font-size: 1.6rem;
+}
+
+.checkout-btn {
+    width: 100%;
+}
+
+
+/* =====================================================
+   CAJA REGISTRADORA
+===================================================== */
+
+.cash-register {
+    width: min(650px, 100%);
+    margin: 0 auto;
+    padding: 30px;
+    background: white;
+    border-radius: 28px;
+    box-shadow: 0 15px 45px rgba(30, 48, 70, 0.1);
+}
+
+.cash-screen {
+    padding: 25px;
+    border-radius: 18px;
+    text-align: center;
+    background: #26354d;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.cash-screen span {
+    display: block;
+    font-size: 0.8rem;
+    opacity: 0.75;
+    margin-bottom: 10px;
+}
+
+.cash-screen strong {
+    font-size: 2.5rem;
+}
+
+.payment-area h3 {
+    margin-bottom: 18px;
+    color: #29364d;
+}
+
+.money-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.money-options button {
+    padding: 15px;
+    border: 2px solid #e4e9ef;
+    border-radius: 12px;
+    background: white;
+    color: #34435b;
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.money-options button:hover,
+.money-options button.selected {
+    border-color: #27ae60;
+    background: #eaf8f0;
+    color: #218c50;
+}
+
+.change-area {
+    margin: 28px 0;
+    padding: 22px;
+    border-radius: 17px;
+    background: #f4f7fa;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.change-area span {
+    font-weight: 700;
+}
+
+.change-area strong {
+    font-size: 1.8rem;
+    color: #27ae60;
+}
+
+
+/* =====================================================
+   COMO JUGAR
+===================================================== */
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.step-card {
+    position: relative;
+    padding: 30px 22px;
+    text-align: center;
+    border: 1px solid #e8ecf2;
+    border-radius: 22px;
+    background: white;
+    box-shadow: 0 8px 25px rgba(30, 45, 65, 0.05);
+}
+
+.step-number {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #fff0e8;
+    color: #ff7043;
+    font-weight: 800;
+}
+
+.step-icon {
+    font-size: 3rem;
+    margin-bottom: 18px;
+}
+
+.step-card h3 {
+    margin-bottom: 10px;
+    color: #29364d;
+}
+
+.step-card p {
+    color: #788397;
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   MODAL
+===================================================== */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(24, 35, 52, 0.55);
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+    width: min(430px, 100%);
+    padding: 40px 30px;
+    text-align: center;
+    background: white;
+    border-radius: 28px;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.2);
+}
+
+.modal-icon {
+    font-size: 4rem;
+    margin-bottom: 15px;
+}
+
+.modal-content h2 {
+    color: #27364d;
+    margin-bottom: 12px;
+}
+
+.modal-content p {
+    color: #707b8d;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+    background: #26354d;
+    color: white;
+    padding: 45px 0 20px;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer h3 {
+    margin-bottom: 8px;
+}
+
+.footer p {
+    color: #c6cfdb;
+    line-height: 1.6;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    text-align: center;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .nav {
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        display: none;
+        flex-direction: column;
+        background: white;
+        border-bottom: 1px solid #e6eaf0;
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .game-info {
+        grid-template-columns: 1fr;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .hero {
+        padding: 60px 0;
+    }
+
+    .hero h1 {
+        font-size: 2.3rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .customer-card {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .money-options {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .cash-register,
+    .cart-area,
+    .products-area {
+        padding: 20px;
+    }
+
+    .products-header,
+    .cart-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
